@@ -1,10 +1,11 @@
 ---
 layout: layouts/post.njk
 title: About Me
-templateClass: tmpl-post
+heroTitle: "Developer focused on building delightful products"
 eleventyNavigation:
   key: About Me
+  parent: Primary
   order: 3
 ---
 
-I am a person that writes stuff.
+I am a person that writes stuff. About things

@@ -1,12 +1,12 @@
 {
   "title": "Tiaan du Plessis",
   "url": "https://tiaan.dev",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "Developer focused on building delightful products",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Developer focused on building delightful products",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://myurl.com/"
+    "id": "https://tiaan.dev"
   },
   "author": {
     "name": "Tiaan du Plessis",

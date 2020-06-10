@@ -9,7 +9,7 @@ eleventyNavigation:
 ---
 
 <h2>Latest 5 Posts</h2>
-p
+
 {% set postslist = collections.posts | head(-5) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}

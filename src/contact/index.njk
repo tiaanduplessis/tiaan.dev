@@ -10,8 +10,8 @@ eleventyNavigation:
 
 <p>Have a potential project in mind or just want to say hello? I'll try to get back to you as quick as possible!</p>
 
-<form class="contact-form" action="{{ metadata.formspree }}" method="POST">
-  <input type="text" name="_gotcha" style="display:none" />
+<form class="contact-form" action="/thank-you" netlify-honeypot="gotcha" method="POST" data-netlify="true">
+  <input type="text" name="gotcha" style="display:none" />
   <label for="contact-name">Name</label>
   <input name="name" id="contact-name" type="text" placeholder="E.g. Sonja" required/>
   <label for="contact-email">Email address</label>

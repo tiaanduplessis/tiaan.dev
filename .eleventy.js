@@ -1,35 +1,43 @@
 const fs = require("fs");
 
 const { DateTime } = require("luxon");
+
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const pluginPWA = require("eleventy-plugin-pwa")
+
 const markdownIt = require("markdown-it");
 const CleanCSS = require("clean-css");
 const markdownItAnchor = require("markdown-it-anchor");
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
-  eleventyConfig.addPlugin(pluginNavigation);
+const isProd = process.env.NODE_ENV === 'production'
 
-  eleventyConfig.setDataDeepMerge(true);
+module.exports = function (config) {
 
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  // Plugins
+  config.addPlugin(pluginRss);
+  config.addPlugin(pluginSyntaxHighlight);
+  config.addPlugin(pluginNavigation);
+  isProd && config.addPlugin(pluginPWA);
 
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
+  config.setDataDeepMerge(true);
+
+  config.addLayoutAlias("post", "layouts/post.njk");
+
+  config.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLL yyyy"
     );
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+  config.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
 
   // Get the first `n` elements of a collection.
-  eleventyConfig.addFilter("head", (array, n) => {
+  config.addFilter("head", (array, n) => {
     if (n < 0) {
       return array.slice(n);
     }
@@ -37,14 +45,14 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
-  eleventyConfig.addFilter("cssmin", function (code) {
+  config.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
+  config.addCollection("tagList", require("./src/_11ty/getTagList"));
 
-  eleventyConfig.addPassthroughCopy("./src/images");
-  eleventyConfig.addPassthroughCopy("./src/css");
+  config.addPassthroughCopy("./src/images");
+  config.addPassthroughCopy("./src/css");
 
   let markdownLibrary = markdownIt({
     html: true,
@@ -55,10 +63,10 @@ module.exports = function (eleventyConfig) {
     permalinkClass: "direct-link",
     permalinkSymbol: "#",
   });
-  eleventyConfig.setLibrary("md", markdownLibrary);
+  config.setLibrary("md", markdownLibrary);
 
   // Browsersync Overrides
-  eleventyConfig.setBrowserSyncConfig({
+  config.setBrowserSyncConfig({
     callbacks: {
       ready: function (error, browserSync) {
         if (error) throw error;

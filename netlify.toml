@@ -9,9 +9,3 @@
         X-XSS-Protection = "1; mode=block"
         X-Content-Type-Options = "nosniff"
         Referrer-Policy= "no-referrer-when-downgrade"
-
-# 404s
-[[redirects]]
-    from = "*"
-    to = "/404"
-    status = 404

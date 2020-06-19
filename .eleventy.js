@@ -53,6 +53,7 @@ module.exports = function (config) {
 
   config.addPassthroughCopy("./src/images");
   config.addPassthroughCopy("./src/css");
+  config.addPassthroughCopy({ "./src/meta": "." });
 
   let markdownLibrary = markdownIt({
     html: true,

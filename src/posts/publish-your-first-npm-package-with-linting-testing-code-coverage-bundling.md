@@ -108,9 +108,9 @@ Now comes the fun part of configuring our development dependencies.
 Firstly, we need to add a build script to our package.json file:
 
 ```
-...
+…
 "scripts": {
-    ...
+    …
     "build": "microbundle --name getPkg"
 },
 ```
@@ -118,12 +118,12 @@ Firstly, we need to add a build script to our package.json file:
 Note that I’m also specifying the name that [microbundle](https://github.com/developit/microbundle) should use for the [UMD format](https://github.com/umdjs/umd). Next, we need to tell [microbundle](https://github.com/developit/microbundle) what the entry-point is for our package as well as to where the bundled files should be generated. Add this to your package.json file:
 
 ```
-...
+…
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.mjs",
   "source": "src/index.js",
-  ...
+  …
 ```
 
 We will create src/index.js file shortly after setting up the rest of our dependencies.
@@ -133,9 +133,9 @@ We will create src/index.js file shortly after setting up the rest of our depend
 Next, we need to add a lint script to our package.json file:
 
 ```
-...
+…
 "scripts": {
-    ...
+    …
     "lint": "standard --fix"
 },
 ```
@@ -143,7 +143,7 @@ Next, we need to add a lint script to our package.json file:
 The --fix flag tells [standard](https://standardjs.com/) it should attempt to fix linting issues automatically if possible. We also need to configure [standard](https://standardjs.com/) to recognize [jest](https://github.com/facebook/jest) as part of the environment by adding this to our package.json file:
 
 ```
-...
+…
   "standard": {
     "env": {
       "jest": true
@@ -157,7 +157,7 @@ Next, we need to add a couple of testing related scripts to our package.json fil
 
 ```
 "scripts": {
-    ...
+    …
     "test": "jest",
     "coverage": "jest --coverage",
     "watch": "jest --watch"

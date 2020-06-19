@@ -41,7 +41,7 @@ For example, say you want to implement a real-time search in your application. A
 
 ```js
 const getSearchInfo = function getSearchInfo() {
-  // ... Some network stuff done here
+  // … Some network stuff done here
   console.log("Request made!");
 };
 

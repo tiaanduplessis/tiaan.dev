@@ -11,10 +11,10 @@
     data-options='{"settings":{"after_subscribe":{"action":"redirect", "redirect_url":"{{ metadata.url }}/thanks-for-subscribing"}'
     method="post"
   >
-      <label for="newsletter-name">First name</label>
+      <label for="newsletter-name">Name</label>
       <input id="newsletter-name" name="fields[first_name]" type="text" placeholder="E.g. Sonja" required/>
-      <label for="newsletter-name">Email address</label>
-      <input name="email_address" type="email" placeholder="E.g. sonja@email.com" required/>
+      <label for="newsletter-email">Email address</label>
+      <input id="newsletter-email" name="email_address" type="email" placeholder="E.g. sonja@email.com" required/>
       <button class="newsletter__submit" type="submit">Join</button>
   </form>
 </section>

@@ -282,7 +282,7 @@ button {
   font-weight: 700;
   font-size: var(--step-0);
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
   border: none;
   border-radius: 0.5rem;
   height: 3.5rem;

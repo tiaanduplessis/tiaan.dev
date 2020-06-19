@@ -15,6 +15,6 @@ I'm currently working as a Senior Software Developer at [Full Facing](https://ww
 
 As my side hustle, I'm [bootstrapping a development agency with 2 close friends](https://www.andcru.io/). Recently we released the new [Varsity Vibe mobile app](https://play.google.com/store/apps/details?id=com.varsityvibeapp) with the new website on its way!
 
-In my free time, I like to read, play Rugby, and spend time with my wife whom I love very dearly.
+In my free time, I like to read, play rugby, and spend time with my wife whom I love very dearly.
 
-[I'm always open for a chat](/contact). Whether it is an awesome new project or to help someone new to Web development get started. I'm Looking forward to hearing from you!
+[I'm always open for a chat](/contact). Whether it is an awesome new project or to help someone new to Web development get started. I'm looking forward to hearing from you!

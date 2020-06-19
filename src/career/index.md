@@ -1,6 +1,6 @@
 ---
 layout: layouts/home.njk
-heroTitle: "My career till now"
+heroTitle: "My career so far"
 eleventyNavigation:
   key: Career
   parent: Secondary
@@ -17,8 +17,8 @@ eleventyNavigation:
 
 ### Contractor | Senior Software Developer @ [The Delta Studio](https://www.thedelta.io/) <small>(October 2019 to March 2020)</small>
 
-- Lead Front-end & mobile developer for a "Uber for tow truck drivers" MVP that included a driver app, customer app & admin portal.
-- Built the intial version of the [VIA marketing website](https://www.viadata.io/).
+- Lead Front-end & mobile developer for an "Uber for tow truck drivers" MVP that included a driver app, customer app & admin portal.
+- Built the initial version of the [VIA marketing website](https://www.viadata.io/).
 - Assisted in the development of [Global Citizen Foundation marketing website](https://www.globalcitizenfoundation.org/en/).
 - Assisted in the development of [Moov web app](https://moovme.co.za/)
 - Assisted in the development of in-app game for a leading music streaming app.
@@ -30,7 +30,7 @@ eleventyNavigation:
 
 ### Software Developer at [Full Facing](https://www.fullfacing.com/) <small>(August 2016 – June 2018)</small>
 
-- Lead Developer on first React Native version of the [Shoprite app](https://play.google.com/store/apps/details?id=za.co.shoprite.shopriteeezicoupon) as well as the [Checkers app](https://play.google.com/store/apps/details?id=za.co.shoprite.eezicoupon&hl=en_ZA).
+- Lead Developer on first React Native version of the [Shoprite app](https://play.google.com/store/apps/details?id=za.co.shoprite.shopriteeezicoupon) and the [Checkers app](https://play.google.com/store/apps/details?id=za.co.shoprite.eezicoupon&hl=en_ZA).
 - Front-end lead on [Lesson Desk](https://www.lessondesk.com/) Head Office.
 - Front-end lead on [Lesson Desk](https://www.lessondesk.com/) Individual.
 - Assisted in development of Radio Retail for Spar mobile app.

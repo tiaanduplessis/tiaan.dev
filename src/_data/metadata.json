@@ -4,8 +4,8 @@
   "description": "Developer focused on building delightful products",
   "feed": {
     "subtitle": "Developer focused on building delightful products",
-    "filename": "feed.xml",
-    "path": "/feed/feed.xml",
+    "filename": "all.xml",
+    "path": "/feed/all.xml",
     "id": "https://tiaan.dev"
   },
   "author": {

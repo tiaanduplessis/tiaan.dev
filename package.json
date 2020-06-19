@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "Website of Tiaan du Plessis",
   "scripts": {
+    "// Workflow": "Eleventy development",
     "build": "eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve --port=8055",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+
+    "// Format": "Formatting using prettier",
+    "format": "npm run format:css & npm run format:md",
+    "format:css": "prettier --write src/**/*.css",
+    "format:md": "prettier --write src/**/*.md"
   },
   "repository": {
     "type": "git",

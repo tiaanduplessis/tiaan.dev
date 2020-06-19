@@ -7,15 +7,15 @@ layout: layouts/post.njk
 
 In this tutorial I’ll will be taking you through:
 
-* Setting up a new package repository.
+- Setting up a new package repository.
 
-* Adding and configuring bundling with [microbundle](https://github.com/developit/microbundle).
+- Adding and configuring bundling with [microbundle](https://github.com/developit/microbundle).
 
-* Adding and configuring testing and code coverage with [Jest](https://github.com/facebook/jest).
+- Adding and configuring testing and code coverage with [Jest](https://github.com/facebook/jest).
 
-* Adding and configuring with [Standard JS](https://standardjs.com/).
+- Adding and configuring with [Standard JS](https://standardjs.com/).
 
-* Lastly, publishing the package to the [npm registry](https://www.npmjs.com/).
+- Lastly, publishing the package to the [npm registry](https://www.npmjs.com/).
 
 ## Setup
 
@@ -87,13 +87,13 @@ dist
 
 Here we ignore the node_modules directory of dependencies, the coverage directory that is generated when running our code coverage script as well as the dist directory for our bundled files. Next, we are going to install the development dependencies required for our package. These are:
 
-* [microbundle](https://github.com/developit/microbundle) — A Zero-configuration bundler for tiny modules. Allowing us to make our package available in different formats
+- [microbundle](https://github.com/developit/microbundle) — A Zero-configuration bundler for tiny modules. Allowing us to make our package available in different formats
 
-* [jest](https://github.com/facebook/jest) — A delightful JavaScript testing framework which we will use for running our unit tests & getting code coverage
+- [jest](https://github.com/facebook/jest) — A delightful JavaScript testing framework which we will use for running our unit tests & getting code coverage
 
-* [babel-preset-env](https://www.npmjs.com/package/babel-preset-env) — Used by [jest](https://github.com/facebook/jest) in our case to understand the new module syntax.
+- [babel-preset-env](https://www.npmjs.com/package/babel-preset-env) — Used by [jest](https://github.com/facebook/jest) in our case to understand the new module syntax.
 
-* [standard](https://standardjs.com/) — A preconfigured Javascript linter & formatter we will run on our files.
+- [standard](https://standardjs.com/) — A preconfigured Javascript linter & formatter we will run on our files.
 
 This may take a while depending on your connection:
 
@@ -192,14 +192,12 @@ $ touch src/index.js
 $ touch src/index.test.js
 ```
 
-
-
 Now the moment of truth, add the following to `src/index.js`:
 
 ```js
 // src/index.js
 export default function getPkg() {
-    return 'This package has been published'
+  return "This package has been published";
 }
 ```
 
@@ -207,19 +205,19 @@ Indeed the next [React](https://reactjs.org/) has just been created. Add the fol
 
 ```js
 // src/index.test.js
-import getPkg from './'
+import getPkg from "./";
 
-test('should get the pkg', () => {
-    // Arrange
-    const expected = 'This package has been published'
+test("should get the pkg", () => {
+  // Arrange
+  const expected = "This package has been published";
 
-    // Act
-    const actual = getPkg()
+  // Act
+  const actual = getPkg();
 
-    // Assert
-    expect(actual).toBeDefined()
-    expect(actual).toBe(expected)
-})
+  // Assert
+  expect(actual).toBeDefined();
+  expect(actual).toBe(expected);
+});
 ```
 
 ## Running Scripts
@@ -268,8 +266,8 @@ Congrats! You just published your first module.
 
 ## Next steps
 
-* Add [husky](https://github.com/typicode/husky) so your linting, testing & build process runs as a git hook.
+- Add [husky](https://github.com/typicode/husky) so your linting, testing & build process runs as a git hook.
 
-* Create a Github repo and push up your new package.
+- Create a Github repo and push up your new package.
 
-*A special thanks to [Richard](https://github.com/Executioner1939), [Mardu](https://github.com/marduSwanepoel) & [Pedre](https://github.com/pedreviljoen) for reviewing this post.*
+_A special thanks to [Richard](https://github.com/Executioner1939), [Mardu](https://github.com/marduSwanepoel) & [Pedre](https://github.com/pedreviljoen) for reviewing this post._

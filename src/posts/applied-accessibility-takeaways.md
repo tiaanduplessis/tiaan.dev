@@ -9,9 +9,10 @@ This week I completed the Applied Accessibility section of [freeCodeCamp](https:
 
 - When dealing with images, always include `alt` attribute on a [`img` tag](https://www.w3schools.com/tags/tag_img.asp). This should be a short description of the image content and provide a text alternative for visually impaired users. Screen readers use the `alt` attribute to deliver important information. In cases where images are already described with text content or the image does not add meaning to the page, use a empty `alt` attribute. If the image is purely decorative, such as a background, [setting the image with CSS](https://css-tricks.com/replace-the-image-in-an-img-with-css/) is preferred.
 
-- Headings should follow hierarchical relationships.  readers can be set to read only the headers on a page, thus heading tags should have semantic meaning and **not be selected based on their size**. Stick to using only one `h1` element per a page, which is the main subject of the page, and build a logical document outline from there.
+- Headings should follow hierarchical relationships. readers can be set to read only the headers on a page, thus heading tags should have semantic meaning and **not be selected based on their size**. Stick to using only one `h1` element per a page, which is the main subject of the page, and build a logical document outline from there.
 
 - Instead of creating a abomination of nested `div` elements, [prefer using elements with semantic meaning](https://www.w3schools.com/html/html5_semantic_elements.asp):
+
   - Use the `main` element to wrap the main content of the page. Stick to one per a page.
   - Independent, self contained content should be in `article` tags.
   - Use `section` tag to group related content e.g. the different sections in a `article`.
@@ -20,6 +21,7 @@ This week I completed the Applied Accessibility section of [freeCodeCamp](https:
   - Use a `footer` tag at bottom of a page with copyright information and related links.
 
 - Always ensure you provide text alternatives for your content:
+
   - With `audio` elements you should provide a link to the transcript.
   - Time values should be wrapped in `time` tags with a associated `datetime` attribute to provide a standardizd time format for users.
   - Visual representations such as graphs should be wrapped in `figure` tags and have a descriptive `figcaption`. This provides semantic grouping as well as a text alternative.

@@ -9,10 +9,10 @@ When working with events in React, you're not working with the browsers native e
 
 ```js
 class Component extends React.Component {
-  handleEvent = event => {
-    console.log(event) // instance of SyntheticEvent
-    console.log(event.nativeEvent) // Native browser event
-  }
+  handleEvent = (event) => {
+    console.log(event); // instance of SyntheticEvent
+    console.log(event.nativeEvent); // Native browser event
+  };
 
   render() {
     // ...
@@ -28,11 +28,11 @@ Because a synthetic instance pool is used, instances have to be nullified after 
 
 ```js
 class Component extends React.Component {
-  handleEvent = event => {
+  handleEvent = (event) => {
     setTimeout(() => {
-      console.log(event) // null
-    })
-  }
+      console.log(event); // null
+    });
+  };
 
   render() {
     // ...

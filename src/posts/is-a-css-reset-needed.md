@@ -15,10 +15,9 @@ If you open your browser's dev-tools and look at the styles applied to a random 
 
 That's where a CSS reset comes in. It's a set of CSS rules that apply styling to HTML elements with the purpose of providing a consistent baseline. It overrides the browsers base styles with defaults specified by the reset, thus preventing cross-browser differences as much as possible.
 
-
 ## Arguments Against
 
-Some developers consider adding a reset to a project as a  foundational step. Popular CSS frameworks such as [Bootstrap](https://getbootstrap.com) even include a reset.
+Some developers consider adding a reset to a project as a foundational step. Popular CSS frameworks such as [Bootstrap](https://getbootstrap.com) even include a reset.
 
 Others however criticize it for introducing unneeded bloat. Adding a bunch of rules that will be overwritten anyway. It's understandable that you would want minimize the amount of CSS sent. If you feel this way, I recommend looking for tools and libraries in the ecosystem to help you cleanup your CSS as part of the build process. I have found [Purify CSS](https://github.com/purifycss/purifycss) to be useful in removing unused CSS from my projects.
 
@@ -30,9 +29,9 @@ I tend to include a reset in projects for my own peace of mind. However, the siz
 
 ```css
 * {
- box-sizing: border-box;
- padding: 0;
- margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 ```
 

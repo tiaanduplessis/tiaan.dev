@@ -35,8 +35,7 @@ eleventyNavigation:
 - Front-end lead on [Lesson Desk](https://www.lessondesk.com/) Individual.
 - Assisted in development of Radio Retail for Spar mobile app.
 
-### Software Development Intern at [Full Facing](https://www.fullfacing.com/)  <small>(March 2016 – July 2016)</small>
+### Software Development Intern at [Full Facing](https://www.fullfacing.com/) <small>(March 2016 – July 2016)</small>
 
 - Developed the [Full Facing](https://www.fullfacing.com/), [Lesson Desk](https://www.lessondesk.com/), [Gatekeeper](https://gatekeeper.fullfacing.com/), & [iFings](http://ifings.com/) marketing websites.
 - Maintained and added multiple features to the [Gatekeeper Setup Assistant iOS app](https://apps.apple.com/us/app/gatekeeper-setup-assistant/id1119093038).
-

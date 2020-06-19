@@ -10,9 +10,7 @@
     "debug": "DEBUG=* eleventy",
 
     "// Format": "Formatting using prettier",
-    "format": "npm run format:css & npm run format:md",
-    "format:css": "prettier --write src/**/*.css",
-    "format:md": "prettier --write src/**/*.md"
+    "format": "prettier --write './**/*.(js|css|md)'"
   },
   "repository": {
     "type": "git",

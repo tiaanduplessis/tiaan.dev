@@ -35,6 +35,7 @@ npx eleventy --watch
 ```
 
 Or in debug mode:
+
 ```
 DEBUG=* npx eleventy
 ```

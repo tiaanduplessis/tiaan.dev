@@ -5,16 +5,15 @@ const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-const pluginPWA = require("eleventy-plugin-pwa")
+const pluginPWA = require("eleventy-plugin-pwa");
 
 const markdownIt = require("markdown-it");
 const CleanCSS = require("clean-css");
 const markdownItAnchor = require("markdown-it-anchor");
 
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === "production";
 
 module.exports = function (config) {
-
   // Plugins
   config.addPlugin(pluginRss);
   config.addPlugin(pluginSyntaxHighlight);

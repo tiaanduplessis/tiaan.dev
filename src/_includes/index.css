@@ -326,7 +326,7 @@ form button {
 .tag {
   min-width: 3rem;
   text-align: center;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   display: inline-block;
   vertical-align: text-top;
   text-transform: uppercase;

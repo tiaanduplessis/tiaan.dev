@@ -390,6 +390,7 @@ a[href].direct-link:focus:visited,
 }
 
 .logo__graphic {
+  color: var(--color-primary);
   width: 4rem;
   height: 4rem;
   margin: 0;

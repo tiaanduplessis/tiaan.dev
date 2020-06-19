@@ -6,7 +6,7 @@
     "// Workflow": "Eleventy development",
     "build": "NODE_ENV=production eleventy",
     "watch": "eleventy --watch",
-    "serve": "eleventy --serve --port=8055",
+    "serve": "eleventy --serve --port=8056",
     "debug": "DEBUG=* eleventy",
     "// Format": "Formatting using prettier",
     "format": "prettier --write './**/*.(js|css|md)'"

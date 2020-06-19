@@ -252,19 +252,26 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input {
+input, textarea {
+  font-family: inherit;
+
   height: 3.5rem;
   border-radius: 0.5rem;
   border: 2px solid var(--color-text);
   width: 100%;
   margin-bottom: 2rem;
-  padding: 0 1rem;
+  padding: 1rem;
   font-size: var(--step-0);
   background-color: var(--color-white);
   color: var(--color-black);
 }
 
-input:focus {
+textarea {
+  height: 10rem;
+  padding: 1rem;
+}
+
+input:focus, textarea:focus {
   outline: none;
   border-color: var(--color-primary);
 }
@@ -303,6 +310,11 @@ button[aria-disabled="true"] {
   opacity: 0.7;
 }
 
+form button {
+  margin-top: 2rem;
+}
+
+
 /* ===[Tag]=== */
 
 .tag {
@@ -314,7 +326,7 @@ button[aria-disabled="true"] {
   padding: 0.1rem 0.5rem;
   border-radius: 0.25rem;
   text-decoration: none;
-  background-color: var(--color-primary);
+  background-color: var(--color-accent-muted);
   box-shadow: none;
   font-weight: 600;
   color: var(--color-text);
@@ -565,6 +577,12 @@ a[href].direct-link:focus:visited,
   white-space: nowrap;
 }
 
+/* ===[Contact form]=== */
+
+.contact-form {
+    max-width: 45rem;
+}
+
 /* ===[Newsletter]=== */
 
 .newsletter {
@@ -592,9 +610,24 @@ a[href].direct-link:focus:visited,
   border-radius: 1rem;
 }
 
-.newsletter__submit {
-  margin-top: 2rem;
-}
+/* Skip Link */
+
+.skip-link {
+    z-index: 1;
+    background: var(--color-text);
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    color: var(--color-background);
+    position: absolute;
+    transform: translateY(-200%);
+    transition: transform 200ms;
+    text-decoration: none;
+  }
+  .skip-link:focus,
+  .skip-link:active {
+    transform: translateY(0%);
+  }
 
 /* ===[Code]=== */
 

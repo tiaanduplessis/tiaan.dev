@@ -95,10 +95,8 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
 
-    // These are all optional, defaults are shown:
     dir: {
       input: "./src",
-
       includes: "_includes",
       data: "_data",
       output: "dist"

@@ -1,0 +1,14 @@
+---
+layout: layouts/home.njk
+permalink: /reading/
+eleventyNavigation:
+  key: Reading
+  parent: Secondary
+---
+
+<h2>Reading</h2>
+
+<p>I keep track of all the content I consume. To serve as reference and a reminder.</p>
+
+{% set postslist = collections.reading %}
+{% include "postslist.njk" %}

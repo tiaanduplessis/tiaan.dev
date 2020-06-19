@@ -1,0 +1,20 @@
+<section class="newsletter" aria-labelledby="newsletter-title">
+  <div class="newsletter__content">
+    <h2 id="newsletter-title">Newsletter</h2>
+    <p><a href="/reading">I read a lot</a>. Not all of it is good though. If you would like to get an occasional list of <strong>the best software development related resources</strong> I've found, please sign up for my newsletter. I'll even throw in some of my content once in while.</p>
+  </div>
+  <form
+    class="newsletter__form"
+    action="https://app.convertkit.com/forms/1473015/subscriptions"
+    data-sv-form="1473015"
+    data-uid="4f24c32e76"
+    data-options='{"settings":{"after_subscribe":{"action":"redirect", "redirect_url":"{{ metadata.url }}/thanks-for-subscribing"}'
+    method="post"
+  >
+      <label for="newsletter-name">First name</label>
+      <input id="newsletter-name" name="fields[first_name]" type="text" placeholder="E.g. Sonja" required/>
+      <label for="newsletter-name">Email address</label>
+      <input name="email_address" type="email" placeholder="E.g. sonja@email.com" required/>
+      <button class="newsletter__submit" type="submit">Join</button>
+  </form>
+</section>

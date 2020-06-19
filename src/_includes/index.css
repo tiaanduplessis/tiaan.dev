@@ -857,7 +857,7 @@ pre[class*="language-"] {
     --color-text: #fff;
     --color-background: #212121;
     --color-accent-muted: #313131;
-    --color-accent: rgba(41, 40, 37, 0.5);
+    --color-accent: #252423;
   }
 
   body {

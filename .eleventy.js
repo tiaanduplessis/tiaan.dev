@@ -45,9 +45,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/css");
-  eleventyConfig.addPassthroughCopy({ "./src/meta": "." });
 
-  /* Markdown Overrides */
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
@@ -65,7 +63,7 @@ module.exports = function (eleventyConfig) {
       ready: function (error, browserSync) {
         if (error) throw error;
 
-        const content_404 = fs.readFileSync("_site/404.html");
+        const content_404 = fs.readFileSync("dist/404.html");
 
         browserSync.addMiddleware("*", (req, res) => {
           // Provides the 404 content without redirect.

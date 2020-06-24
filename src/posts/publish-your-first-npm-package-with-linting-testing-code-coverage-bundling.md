@@ -1,7 +1,7 @@
 ---
 title: Publish your first npm package with Linting, Testing, Code Coverage & bundling
 date: 2018-10-15
-tags: ["javascript"]
+tags: ["front-end", "javascript"]
 layout: layouts/post.njk
 ---
 

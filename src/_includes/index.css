@@ -822,6 +822,12 @@ pre[class*="language-"] {
   }
 }
 
+/* Post */
+
+.postlist__item {
+  margin-bottom: 2em;
+}
+
 /* ===[Print]=== */
 
 @media print {

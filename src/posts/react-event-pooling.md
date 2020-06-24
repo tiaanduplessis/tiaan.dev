@@ -1,7 +1,7 @@
 ---
 title: React Event Pooling
 date: 2019-04-04
-tags: ["react", "js"]
+tags: ["react", "javascript"]
 layout: layouts/post.njk
 ---
 

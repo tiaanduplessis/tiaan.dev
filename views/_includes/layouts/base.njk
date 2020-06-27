@@ -48,7 +48,7 @@
         <ul class="nav__list">
         {% set navPrimary = collections.all | eleventyNavigation("Primary") %}
         {%- for entry in navPrimary %}
-          <li class="nav__list-item"><a class="nav__list-item-link"  href="{{ entry.url | url }}"  aria-current="{% if entry.url == page.url %}page{% endif %}">{{ entry.title }}</a></li>
+          <li class="nav__list-item"><a class="nav__list-item-link"  href="{{ entry.url | url }}"  {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a></li>
         {%- endfor %}
         </ul>
       </nav>

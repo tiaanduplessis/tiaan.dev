@@ -7,11 +7,12 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginPWA = require("eleventy-plugin-pwa");
 
+const htmlmin = require("html-minifier")
 const markdownIt = require("markdown-it");
-const CleanCSS = require("clean-css");
 const markdownItAnchor = require("markdown-it-anchor");
 
 const isProd = process.env.NODE_ENV === "production";
+const srcDir = './views'
 
 module.exports = function (config) {
   // Plugins
@@ -44,15 +45,10 @@ module.exports = function (config) {
     return array.slice(0, n);
   });
 
-  config.addFilter("cssmin", function (code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
+  config.addCollection("tagList", require(`${srcDir}/_11ty/getTagList`));
 
-  config.addCollection("tagList", require("./src/_11ty/getTagList"));
-
-  config.addPassthroughCopy("./src/images");
-  config.addPassthroughCopy("./src/css");
-  config.addPassthroughCopy({ "./src/meta": "." });
+  config.addPassthroughCopy("./views/images");
+  config.addPassthroughCopy({ "./views/meta": "." });
 
   let markdownLibrary = markdownIt({
     html: true,
@@ -84,6 +80,20 @@ module.exports = function (config) {
     ghostMode: false,
   });
 
+  config.addTransform("htmlmin", function (content, outputPath) {
+    // TODO: Figure out what is causing parse issue in /reading
+    if (outputPath.endsWith(".html") && !outputPath.includes('reading')) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyJS: true,
+      });
+      return minified;
+    }
+    return content;
+  });
+
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
 
@@ -102,7 +112,7 @@ module.exports = function (config) {
     dataTemplateEngine: "njk",
 
     dir: {
-      input: "./src",
+      input: "./views",
       includes: "_includes",
       data: "_data",
       output: "dist",

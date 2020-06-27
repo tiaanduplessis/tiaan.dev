@@ -34,14 +34,7 @@
     </noscript>
 
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-
-    {% set css %}
-      {% include "index.css" %}
-    {% endset %}
-
-    <style>
-      {{ css | cssmin | safe }}
-    </style>
+    <link rel="stylesheet" href="/index.css">
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>

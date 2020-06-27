@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "mount:eleventy": "mount dist --to /",
+    "mount:static": "mount static --to /",
+    "run:eleventy": "eleventy",
+    "run:eleventy::watch": "$1 --watch",
+    "run:css": "postcss static/*.css --dir dist/css --ext css",
+    "run:css::watch": "$1 --watch"
+  },
+  "devOptions": {
+    "port": 3000,
+    "out": "dist",
+    "bundle": false
+  },
+  "plugins": []
+}

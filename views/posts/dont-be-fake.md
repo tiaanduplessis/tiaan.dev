@@ -3,6 +3,7 @@ title: Project People, don't be fake. Be lekker.
 date: 2020-06-22
 tags: ["rant"]
 layout: layouts/post.njk
+eleventyExcludeFromCollections: true
 ---
 
 > **Project owner:** Hi, How are you?

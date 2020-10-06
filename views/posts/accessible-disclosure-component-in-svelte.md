@@ -3,6 +3,7 @@ title: Accessible Disclosure component in Svelte
 date: 2020-09-22
 tags: ["front-end", "svelte"]
 layout: layouts/post.njk
+eleventyExcludeFromCollections: true
 ---
 
 According to the https://www.w3.org/TR/wai-aria-practices/#disclosure a disclosure component is a button that controls the visibility of a section of content. This can frequently be seen in the FAQs section of a site and is often used to provide additional contextual information to a media. The complete implementation can be viewed [in the Svelte REPL](https://svelte.dev/repl/7504bc6ce00e4331b7ecd4481cbcf6a2?version=3.25.1).
@@ -49,7 +50,7 @@ We are switching the default hidden state for the button and content respectivel
 	import {onMount} from "svelte";
 	let hidden = false;
 	let mounted = false;
-	
+
 	onMount(() => {
 		hidden = true;
 		mounted = true;

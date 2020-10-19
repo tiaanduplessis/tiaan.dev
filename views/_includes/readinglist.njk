@@ -1,0 +1,7 @@
+<ul class="list" style="counter-reset: start-from {{ (readinglistCounter or readinglist.length) + 1 }}">
+{% for post in readinglist | reverse %}
+  <li class="list__item{% if post.url == url %} list__item--active{% endif %}">
+    <a href="{{ post.url | url }}" class="list__link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+  </li>
+{% endfor %}
+</ul>

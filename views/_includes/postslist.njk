@@ -1,8 +1,8 @@
-<ul class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+<ul class="list" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
 {% for post in postslist | reverse %}
-  <li class="postlist__item{% if post.url == url %} postlist__item--active{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist__link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="postlist__date" datetime="{{ post.date | htmlDateString }}">({{ post.date | readableDate }})</time>
+  <li class="list__item{% if post.url == url %} list__item--active{% endif %}">
+    <a href="{{ post.url | url }}" class="list__link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <time class="list__date" datetime="{{ post.date | htmlDateString }}">({{ post.date | readableDate }})</time>
     <div>
       {% for tag in post.data.tags %}
         {%- if collections.tagList.indexOf(tag) != -1 -%}

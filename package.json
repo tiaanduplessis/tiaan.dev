@@ -9,7 +9,10 @@
     "build": "npm run clean && snowpack build",
     "debug": "DEBUG=* eleventy",
     "// Format": "Formatting using prettier",
-    "format": "prettier --write './**/*.(js|css|md)'"
+    "format": "prettier --write './**/*.(js|css|md)'",
+    "// Test": "Run tests using Cypress",
+    "cy:open": "cypress open",
+    "test": "start-server-and-test start http://localhost:3000 cy:open"
   },
   "repository": {
     "type": "git",
@@ -35,8 +38,11 @@
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "autoprefixer": "^9.8.4",
+    "axe-core": "^4.0.2",
     "clean-css": "^4.2.3",
     "cssnano": "^4.1.10",
+    "cypress": "^5.4.0",
+    "cypress-axe": "^0.8.1",
     "del-cli": "^3.0.1",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
@@ -46,6 +52,8 @@
     "postcss-cli": "^7.1.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.5",
-    "snowpack": "^2.6.0"
-  }
+    "snowpack": "^2.6.0",
+    "start-server-and-test": "^1.11.5"
+  },
+  "dependencies": {}
 }

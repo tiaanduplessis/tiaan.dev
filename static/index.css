@@ -240,6 +240,11 @@ img {
   margin-bottom: 2rem;
 }
 
+q,
+blockquote {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
 table {
   margin: 1rem 0;
 }

@@ -10,7 +10,8 @@
   "devOptions": {
     "port": 3000,
     "out": "dist",
-    "bundle": false
+    "bundle": false,
+    "hmrDelay": 300
   },
   "plugins": []
 }

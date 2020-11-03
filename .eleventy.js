@@ -6,10 +6,13 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginPWA = require("eleventy-plugin-pwa");
+const pluginSEO = require("eleventy-plugin-seo");
 
 const htmlmin = require("html-minifier")
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+
+const metaData = require('./views/_data/metadata.json')
 
 const isProd = process.env.NODE_ENV === "production";
 const srcDir = './views'
@@ -19,7 +22,14 @@ module.exports = function (config) {
   config.addPlugin(pluginRss);
   config.addPlugin(pluginSyntaxHighlight);
   config.addPlugin(pluginNavigation);
+  config.addPlugin(pluginSEO, {
+    title: metaData.title,
+    description: metaData.description,
+    url: metaData.url,
+    author: metaData.author.name
+  });
   isProd && config.addPlugin(pluginPWA);
+
 
   config.setDataDeepMerge(true);
 

@@ -32,6 +32,12 @@
     "blog"
   ],
   "homepage": "https://github.com/tiaanduplessis/website#readme",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 10",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-navigation": "^0.1.6",

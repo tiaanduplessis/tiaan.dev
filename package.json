@@ -46,7 +46,7 @@
     "@snowpack/plugin-optimize": "^0.2.7",
     "@snowpack/plugin-postcss": "^1.0.7",
     "@snowpack/plugin-run-script": "^2.2.0",
-    "autoprefixer": "^9.8.4",
+    "autoprefixer": "^9.8.6",
     "axe-core": "^4.0.2",
     "clean-css": "^4.2.3",
     "cssnano": "^4.1.10",

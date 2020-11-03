@@ -284,7 +284,6 @@ blockquote p {
 input,
 textarea {
   font-family: inherit;
-
   height: 3.5rem;
   border-radius: 0.5rem;
   border: 2px solid var(--color-text);

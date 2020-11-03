@@ -13,5 +13,7 @@
     "bundle": false,
     "hmrDelay": 300
   },
-  "plugins": []
+  "plugins": [
+    ["@snowpack/plugin-optimize", { "target": "es2015" }]
+  ]
 }

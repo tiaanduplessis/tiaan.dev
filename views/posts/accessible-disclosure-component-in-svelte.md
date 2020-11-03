@@ -12,30 +12,36 @@ The basic mark up required consists of a button element to trigger the functiona
 
 ```html
 <button type="button">Click me</button>
-<div id="content">Content</>
+<div id="content">Content</div>
 ```
 
 Note that we add a ID to the content. This is so the correct relationship can be set up with the trigger using the `aria-controls` attribute. As the name implies, `aria-controls` is used to indicate that a element controls another.
 
 ```html
-
 <button type="button" aria-controls="content">Click me</button>
-<div id="content">Content</>
+<div id="content">Content</div>
 ```
 
 Now that the relationship has been established functionality needs to be added to toggle the visibile state of the content. This can be achieved by setting the `aria-expanded` attribute **on the button element** and using boolean variable to set the hidden state of the content. This results in our final implementation.
 
 ```html
 <script>
-	let hidden = true;
-    const handleClick = () => { hidden = !hidden };
+  let hidden = true;
+  const handleClick = () => {
+    hidden = !hidden;
+  };
 </script>
 
-<button type="button" on:click={handleClick} aria-controls="content" aria-expanded={!hidden}>
-	Click me
+<button
+  type="button"
+  on:click="{handleClick}"
+  aria-controls="content"
+  aria-expanded="{!hidden}"
+>
+  Click me
 </button>
 <div id="content" {hidden}>
-	Content
+  Content
 </div>
 ```
 
@@ -47,24 +53,31 @@ We are switching the default hidden state for the button and content respectivel
 
 ```html
 <script>
-	import {onMount} from "svelte";
-	let hidden = false;
-	let mounted = false;
+  import { onMount } from "svelte";
+  let hidden = false;
+  let mounted = false;
 
-	onMount(() => {
-		hidden = true;
-		mounted = true;
-	})
+  onMount(() => {
+    hidden = true;
+    mounted = true;
+  });
 
-    const handleClick = () => { hidden = !hidden };
+  const handleClick = () => {
+    hidden = !hidden;
+  };
 </script>
 
-<button hidden={!mounted} on:click={handleClick} aria-controls="content" aria-expanded={!hidden}>
-	Button
+<button
+  hidden="{!mounted}"
+  on:click="{handleClick}"
+  aria-controls="content"
+  aria-expanded="{!hidden}"
+>
+  Button
 </button>
 
 <div id="content" {hidden}>
-	Content
+  Content
 </div>
 ```
 

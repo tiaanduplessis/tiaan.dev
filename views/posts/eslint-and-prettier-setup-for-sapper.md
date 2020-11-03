@@ -5,7 +5,7 @@ tags: ["svelte"]
 layout: layouts/post.njk
 ---
 
-I recently started to get very into [Svelte](https://svelte.dev/). The [developer experience has been delightful]((https://github.com/feltcoop/why-svelte)), especially transitions and animations which have always felt a bit meh to me in [React](https://reactjs.org/) land.
+I recently started to get very into [Svelte](https://svelte.dev/). The [developer experience has been delightful](<(https://github.com/feltcoop/why-svelte)>), especially transitions and animations which have always felt a bit meh to me in [React](https://reactjs.org/) land.
 
 In the world of [Svelte](https://svelte.dev/), the meta-framework of choice is [Sapper](https://sapper.svelte.dev). It draws a [close comparison to Next.js](https://sapper.svelte.dev/docs#Comparison_with_Next_js). I frequently use [Next.js](https://nextjs.org/) for projects at [Full Facing](https://www.fullfacing.com/). So it was an easy choice.
 
@@ -36,49 +36,43 @@ A lot of the configuration options are my preference, so update as you see fit.
 ```js
 // .prettierrc.js
 module.exports = {
-  svelteSortOrder: 'styles-markup-scripts',
+  svelteSortOrder: "styles-markup-scripts",
   svelteStrictMode: true,
   svelteBracketNewLine: true,
   svelteAllowShorthand: false,
-  plugins: ['prettier-plugin-svelte']
-}
+  plugins: ["prettier-plugin-svelte"],
+};
 ```
 
 ```js
 // .eslintrc.js
 module.exports = {
-  "extends": ["eslint:recommended", "prettier"],
+  extends: ["eslint:recommended", "prettier"],
   parserOptions: {
     ecmaVersion: 2020,
-    sourceType: 'module'
+    sourceType: "module",
   },
   env: {
     es6: true,
     browser: true,
     node: true,
   },
-  plugins: [
-    'svelte3',
-  ],
+  plugins: ["svelte3"],
   overrides: [
     {
-      files: ['*.svelte'],
-      processor: 'svelte3/svelte3'
+      files: ["*.svelte"],
+      processor: "svelte3/svelte3",
     },
     {
-      "extends": [
-        "plugin:cypress/recommended"
-      ],
+      extends: ["plugin:cypress/recommended"],
       files: ["cypress/**/*"],
       env: {
-        "cypress/globals": true
+        "cypress/globals": true,
       },
-      plugins:[
-        "cypress"
-      ]
-    }
+      plugins: ["cypress"],
+    },
   ],
-}
+};
 ```
 
 ```
@@ -108,7 +102,6 @@ After running the linter initially and fixing all the issues, you probably don't
 ```bash
 npx mrm lint-staged
 ```
-
 
 Now [lint-staged](https://github.com/okonet/lint-staged) and [husky](https://github.com/typicode/husky) are installed. The command should configure both for you out of the box. Resulting in the options being added to your `package.json`. Now the linter will only run on staged files.
 

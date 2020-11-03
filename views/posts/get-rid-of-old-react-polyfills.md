@@ -27,7 +27,7 @@ As suggested in the pull request, we can get around using these polyfills by cre
 
 ```js
 // create-react-context
-export { createContext as default } from 'react';
+export { createContext as default } from "react";
 
 // react-lifecycles-compat
 export function polyfill(Component) {
@@ -39,8 +39,11 @@ We now need to update our Webpack configuration to resolve to these aliases:
 
 ```js
 //...
-config.resolve.alias['create-react-context'] = path.join(__dirname, 'aliases')
-config.resolve.alias['react-lifecycles-compat'] = path.join(__dirname, 'aliases')
+config.resolve.alias["create-react-context"] = path.join(__dirname, "aliases");
+config.resolve.alias["react-lifecycles-compat"] = path.join(
+  __dirname,
+  "aliases"
+);
 //...
 ```
 

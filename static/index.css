@@ -7,7 +7,7 @@
   --color-primary: #cd2653;
   --color-accent: #e4bf57;
   --color-primary-muted: rgba(205, 38, 83, 0.1);
-  --color-accent-muted: rgba(228, 191, 87, .2);
+  --color-accent-muted: rgba(228, 191, 87, 0.2);
   --color-text: var(--color-dark);
   --color-background: var(--color-light);
 
@@ -133,7 +133,8 @@
   color: var(--color-light);
 }
 
-:focus-visible, *:focus {
+:focus-visible,
+*:focus {
   outline: 4px dashed var(--color-text);
 }
 
@@ -242,7 +243,7 @@ img {
 
 q,
 blockquote {
-    quotes: "\201C" "\201D" "\2018" "\2019";
+  quotes: "\201C""\201D""\2018""\2019";
 }
 
 table {
@@ -454,9 +455,8 @@ a[href].direct-link:focus:visited,
 }
 
 .nav__list-item-link[aria-current="page"] {
-
   border-bottom: 4px solid var(--color-primary);
-  background-color: rgba(255,255, 255, .05);
+  background-color: rgba(255, 255, 255, 0.05);
   opacity: 1;
 }
 
@@ -908,18 +908,20 @@ pre[class*="language-"] {
     -moz-osx-font-smoothing: grayscale;
   }
 
-  input, textarea {
+  input,
+  textarea {
     background-color: var(--color-text);
     color: var(--color-background);
   }
 
-  .hero, .footer {
-      background: var(--color-accent-muted);
-      color: var(--color-text);
+  .hero,
+  .footer {
+    background: var(--color-accent-muted);
+    color: var(--color-text);
   }
 
   .tag {
-          background: var(--color-accent-muted);
+    background: var(--color-accent-muted);
   }
 }
 

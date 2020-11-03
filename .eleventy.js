@@ -8,14 +8,14 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginPWA = require("eleventy-plugin-pwa");
 const pluginSEO = require("eleventy-plugin-seo");
 
-const htmlmin = require("html-minifier")
+const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
-const metaData = require('./views/_data/metadata.json')
+const metaData = require("./views/_data/metadata.json");
 
 const isProd = process.env.NODE_ENV === "production";
-const srcDir = './views'
+const srcDir = "./views";
 
 module.exports = function (config) {
   // Plugins
@@ -26,10 +26,9 @@ module.exports = function (config) {
     title: metaData.title,
     description: metaData.description,
     url: metaData.url,
-    author: metaData.author.name
+    author: metaData.author.name,
   });
   isProd && config.addPlugin(pluginPWA);
-
 
   config.setDataDeepMerge(true);
 
@@ -92,7 +91,7 @@ module.exports = function (config) {
 
   config.addTransform("htmlmin", function (content, outputPath) {
     // TODO: Figure out what is causing parse issue in /reading
-    if (outputPath.endsWith(".html") && !outputPath.includes('reading')) {
+    if (outputPath.endsWith(".html") && !outputPath.includes("reading")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,

@@ -391,6 +391,14 @@ a[href].direct-link:focus:visited,
 /* ===[Header]=== */
 
 .header {
+  width: 100%;
+  background-color: var(--color-background);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--color-accent-muted);
+}
+
+.header__inner {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -398,7 +406,6 @@ a[href].direct-link:focus:visited,
   max-width: 78rem;
   padding: 0 2rem;
   margin: 0 auto;
-  width: 100%;
 }
 
 .logo__link {
@@ -460,10 +467,9 @@ a[href].direct-link:focus:visited,
 }
 
 @media (max-width: 60em) {
-  .header {
+  .header__inner {
     padding: 0;
     flex-direction: column;
-    border-bottom: 1px solid var(--color-accent-muted);
   }
 
   .nav {
@@ -473,6 +479,10 @@ a[href].direct-link:focus:visited,
   .nav__list {
     white-space: nowrap;
     overflow-x: scroll;
+  }
+
+  .nav__list-item-link {
+    padding: 1.25rem;
   }
 
   .logo__graphic {
@@ -596,6 +606,10 @@ a[href].direct-link:focus:visited,
   .footer__inner,
   .footer__links {
     flex-direction: column;
+  }
+
+  .logo__link {
+    padding-bottom: 0;
   }
 
   .logo__link,

@@ -16,7 +16,7 @@
   --fluid-min-size: 16;
   --fluid-max-size: 20;
   --fluid-min-ratio: 1.2;
-  --fluid-max-ratio: 1.3;
+  --fluid-max-ratio: 1.4;
 
   --fluid-screen: 100vw;
   --fluid-bp: calc(
@@ -114,6 +114,17 @@
     (
       (var(--fluid-min-size-5) * 1rem) +
         (var(--fluid-max-size-5) - var(--fluid-min-size-5)) * var(--fluid-bp)
+    )
+  );
+
+  --fluid-min-scale-6: var(--fluid-min-scale-5) * var(--fluid-min-ratio);
+  --fluid-max-scale-6: var(--fluid-max-scale-5) * var(--fluid-max-ratio);
+  --fluid-min-size-6: (var(--fluid-min-size) * var(--fluid-min-scale-5)) / 16;
+  --fluid-max-size-6: (var(--fluid-max-size) * var(--fluid-max-scale-5)) / 16;
+  --step-6: calc(
+    (
+      (var(--fluid-min-size-6) * 1rem) +
+        (var(--fluid-max-size-6) - var(--fluid-min-size-6)) * var(--fluid-bp)
     )
   );
 }
@@ -501,13 +512,13 @@ a[href].direct-link:focus:visited,
 
 .hero__title,
 .hero__description {
-  max-width: 78rem;
-  padding: 0 10% 0 2rem;
+  max-width: 80rem;
+  padding: 0 15% 0 2rem;
   margin: 0 auto;
 }
 
 .hero__title {
-  font-size: var(--step-5);
+  font-size: var(--step-6);
   margin-bottom: 2rem;
   color: inherit;
 }

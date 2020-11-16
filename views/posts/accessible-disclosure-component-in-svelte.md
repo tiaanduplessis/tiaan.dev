@@ -3,28 +3,27 @@ title: Accessible Disclosure component in Svelte
 date: 2020-09-22
 tags: ["front-end", "svelte"]
 layout: layouts/post.njk
-eleventyExcludeFromCollections: true
 ---
 
-According to the https://www.w3.org/TR/wai-aria-practices/#disclosure a disclosure component is a button that controls the visibility of a section of content. This can frequently be seen in the FAQs section of a site and is often used to provide additional contextual information to a media. The complete implementation can be viewed [in the Svelte REPL](https://svelte.dev/repl/7504bc6ce00e4331b7ecd4481cbcf6a2?version=3.25.1).
+According to the [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices/#disclosure) a disclosure component is a button that controls the visibility of a section of content. This can frequently be seen in the FAQs section of a site and is often used to provide additional contextual information to a piece of media.
 
-The basic mark up required consists of a button element to trigger the functionality and a container for the content. A button element should always be used as the trigger as the keyboard interactions are required to be compliant to the pattern.
+The basic mark up required consists of a button element to trigger the functionality and a container for the content. A button element should be used as the trigger as the keyboard interactions are required to be compliant with the pattern. As a rule of thumb, buttons should be your go-to for any on-page interactivity and Links for navigation.
 
-```html
+```
 <button type="button">Click me</button>
 <div id="content">Content</div>
 ```
 
-Note that we add a ID to the content. This is so the correct relationship can be set up with the trigger using the `aria-controls` attribute. As the name implies, `aria-controls` is used to indicate that a element controls another.
+Note that we add an ID to the content. This is so the correct relationship can be set up with the trigger element using the `aria-controls` attribute. As the name implies, `aria-controls` is used to indicate that an element controls another.
 
-```html
+```
 <button type="button" aria-controls="content">Click me</button>
 <div id="content">Content</div>
 ```
 
-Now that the relationship has been established functionality needs to be added to toggle the visibile state of the content. This can be achieved by setting the `aria-expanded` attribute **on the button element** and using boolean variable to set the hidden state of the content. This results in our final implementation.
+Now that the relationship has been established functionality needs to be added to toggle the visible state of the content. This can be achieved by setting the `aria-expanded` attribute **on the button element** and using a boolean variable to set the hidden state of the content. This results in our final implementation.
 
-```html
+```
 <script>
   let hidden = true;
   const handleClick = () => {
@@ -47,11 +46,11 @@ Now that the relationship has been established functionality needs to be added t
 
 ## Progressive enhancment
 
-It is possible to SSR your Seltve components which results in the static HTML and CSS required to render static pages which then becomes hydrated afterwards. This is ideal for use cases where no JS is the default. In order for our disclosure component to still function correctly even without JS enabled, we can barrow from [the approach discribed by Andy Bell](https://hankchizljaw.com/wrote/a-progressive-disclosure-component/).
+When using SSR for your Svelte components, the result is static HTML and CSS which then becomes hydrated afterward with JS. However, if JS is disabled this hydration will never take place which might lead to broken functionality if not handled correctly. For our disclosure component to still function, we can borrow from [the approach described by Andy Bell](https://hankchizljaw.com/wrote/a-progressive-disclosure-component/).
 
 We are switching the default hidden state for the button and content respectively. Making the button hidden by default and the content visible. Switching it only when the JS executes.
 
-```html
+```
 <script>
   import { onMount } from "svelte";
   let hidden = false;
@@ -81,7 +80,8 @@ We are switching the default hidden state for the button and content respectivel
 </div>
 ```
 
-## React implementation
+The complete implementation can also be viewed [in the Svelte REPL](https://svelte.dev/repl/7504bc6ce00e4331b7ecd4481cbcf6a2?version=3.25.1).
 
-https://reakit.io/docs/disclosure/
-reach ui link
+## React
+
+If you are using [React](https://reactjs.org/) as your UI library of choice, [Reakit](https://reakit.io/docs/disclosure/) and [Reach UI](https://reach.tech/disclosure) provide excellent unstyled Disclosure components that can be slotted into any project.

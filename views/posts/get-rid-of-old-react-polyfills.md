@@ -1,12 +1,11 @@
 ---
 title: Get Rid of Old React Polyfills using Webpack
 date: 2020-10-21
-tags: ["react"]
+tags: ["react", "webpack"]
 layout: layouts/post.njk
 ---
 
-While looking for possible optimizations to our [Webpack](https://webpack.js.org/) configuration, I came across [this gem](https://github.com/GoogleChromeLabs/webpack-libs-optimizations/pull/17/commits/a0a9bb580941fff3a0640444400135f9e0432a2d) from [
-Porfirio](https://github.com/porfirioribeiro). With this neat little Webpack aliasing trick we can remove the need of depending on outdated polyfills for [React](https://reactjs.org/). In this case [react-lifecycles-compat](https://github.com/reactjs/react-lifecycles-compat) and [create-react-context](https://github.com/jamiebuilds/create-react-context).
+While looking for possible optimizations to our [Webpack](https://webpack.js.org/) configuration, I came across [this gem](https://github.com/GoogleChromeLabs/webpack-libs-optimizations/pull/17/commits/a0a9bb580941fff3a0640444400135f9e0432a2d) from [Porfirio](https://github.com/porfirioribeiro). With this neat little Webpack aliasing trick we can remove the need of depending on outdated polyfills for [React](https://reactjs.org/). In this case [react-lifecycles-compat](https://github.com/reactjs/react-lifecycles-compat) and [create-react-context](https://github.com/jamiebuilds/create-react-context).
 
 This aliasing will work for [React 16.4](https://reactjs.org/) and above as the functionality being polyfilled is now part of core. To see if your project will benefit from this optimization, run `npm ls` to find any dependencies using these polyfills:
 

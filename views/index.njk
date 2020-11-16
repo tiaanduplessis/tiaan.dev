@@ -1,16 +1,16 @@
 ---
 layout: layouts/home.njk
 heroTitle: "Engineer focused on building delightful products"
-heroDescription: "Hi 👋 I’m Tiaan. I'm a Software Engineer who makes accessible, performant and secure apps & websites."
+heroDescription: "Hi, 👋 I’m Tiaan. A Software Engineer who makes accessible, performant, and secure apps & websites."
 eleventyNavigation:
   key: Home
   parent: Primary
   order: 1
 ---
 
-<h2>Latest 3 Posts</h2>
+<h2>Latest 5 Posts</h2>
 
-{% set postslist = collections.posts | head(-3) %}
+{% set postslist = collections.posts | head(-5) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
 

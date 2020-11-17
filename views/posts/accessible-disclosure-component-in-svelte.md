@@ -1,7 +1,7 @@
 ---
 title: Accessible Disclosure component in Svelte
 date: 2020-09-22
-tags: ["front-end", "svelte"]
+tags: ["frontend", "svelte"]
 layout: layouts/post.njk
 ---
 

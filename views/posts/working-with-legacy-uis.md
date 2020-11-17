@@ -1,7 +1,7 @@
 ---
 title: Working with legacy UIs
 date: 2020-06-24
-tags: ["front-end", "javascript", "css", "html"]
+tags: ["frontend", "javascript", "css", "html"]
 layout: layouts/post.njk
 ---
 

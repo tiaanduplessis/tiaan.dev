@@ -3,6 +3,7 @@ title: Software Engineer Resume Template
 date: 2020-11-17
 tags: ["career"]
 layout: layouts/post.njk
+eleventyExcludeFromCollections: true
 ---
 
 ## It's too long
@@ -15,4 +16,4 @@ Remove anything that isn't relevant to the role you are applying for e.g. Past n
 
 ## You do to many different things
 
-## 
+##

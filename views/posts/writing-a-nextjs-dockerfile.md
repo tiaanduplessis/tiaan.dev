@@ -82,7 +82,15 @@ When performing the `COPY . .` command, we want to avoid copying needless direct
 **/npm-debug.log
 **/.env
 **/.editorconfig
-**/next
+**/.next
+**/.prettierignore
+**/.prettierrc.js
+**/cypress.json
+**/cypress
+**/.github
+**/.editorconfig
+**/.eslintignore
+**/.eslintrc.js
 ```
 
 ## Production base image

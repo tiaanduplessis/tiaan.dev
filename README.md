@@ -1,6 +1,6 @@
 # tiaan.dev
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/33b9428e-d349-448e-8844-bde1dc41fb7a/deploy-status)](https://app.netlify.com/sites/tiaan-dev/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/33b9428e-d349-448e-8844-bde1dc41fb7a/deploy-status)](https://app.netlify.com/sites/tiaan-dev/deploys) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 Website of [Tiaan du Plessis](https://github.com/tiaanduplessis). Built on [Eleventy](https://github.com/11ty/eleventy).
 

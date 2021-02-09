@@ -54,7 +54,7 @@
     "@snowpack/plugin-run-script": "^2.2.1",
     "autoprefixer": "^9.8.6",
     "axe-core": "^4.1.1",
-    "clean-css": "^4.2.3",
+    "clean-css": "^5.0.1",
     "commitizen": "^4.2.2",
     "conventional-changelog-cli": "^2.1.1",
     "cssnano": "^4.1.10",

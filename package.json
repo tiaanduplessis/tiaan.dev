@@ -52,7 +52,7 @@
     "@snowpack/plugin-optimize": "^0.2.7",
     "@snowpack/plugin-postcss": "^1.0.11",
     "@snowpack/plugin-run-script": "^2.2.1",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.4.2",
     "axe-core": "^4.1.1",
     "clean-css": "^4.2.3",
     "commitizen": "^4.2.2",

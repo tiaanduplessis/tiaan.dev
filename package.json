@@ -76,7 +76,7 @@
     "prettier": "^2.2.1",
     "snowpack": "^2.18.5",
     "standard-version": "^9.0.0",
-    "start-server-and-test": "^1.11.7"
+    "start-server-and-test": "^3.0.13"
   },
   "husky": {
     "hooks": {
